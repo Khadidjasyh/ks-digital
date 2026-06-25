@@ -1,0 +1,81 @@
+/* ── OVERLAY MODELE ── */
+#modele-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:600;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s;padding:1rem}
+#modele-overlay.show{opacity:1;pointer-events:all}
+#modele-modal{background:var(--bg2);border:1px solid var(--border);border-radius:20px;width:100%;max-width:680px;max-height:90vh;overflow-y:auto;transform:scale(0.92) translateY(20px);transition:transform 0.3s}
+#modele-overlay.show #modele-modal{transform:scale(1) translateY(0)}
+#modele-header{display:flex;justify-content:space-between;align-items:center;padding:1.5rem 1.8rem;border-bottom:1px solid var(--border)}
+#modele-header h3{font-size:1.1rem;font-weight:600}
+#modele-close{background:none;border:1px solid var(--border);color:var(--text2);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;transition:all 0.2s;display:flex;align-items:center;justify-content:center}
+#modele-close:hover{border-color:var(--accent);color:var(--accent2)}
+#modele-content{padding:1.8rem}
+.modele-wa-btn{display:block;margin:0 1.8rem 1.8rem;padding:0.9rem;background:#25d366;color:white;text-align:center;border-radius:10px;text-decoration:none;font-weight:500;transition:background 0.2s}
+.modele-wa-btn:hover{background:#20bd5a}
+
+/* ── DEMO BROWSER ── */
+.demo-browser{background:var(--bg3);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.demo-bar{background:#1a1a2e;padding:0.6rem 1rem;display:flex;align-items:center;gap:6px}
+.demo-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+.demo-dot.r{background:#ff5f57}
+.demo-dot.y{background:#ffbd2e}
+.demo-dot.g{background:#28c840}
+.demo-url{margin-left:auto;font-size:0.72rem;color:var(--text2);font-family:monospace}
+.demo-body{padding:1rem}
+.demo-nav{display:flex;justify-content:space-between;align-items:center;padding:0.5rem 0;border-bottom:1px solid var(--border);margin-bottom:1rem}
+.demo-logo-mini{font-size:0.85rem;font-weight:600;color:var(--accent2)}
+.demo-links{display:flex;gap:1rem}
+.demo-links span{font-size:0.72rem;color:var(--text2)}
+.demo-hero-mini{padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:1rem}
+.demo-hero-mini h2{font-size:1.1rem;margin-bottom:0.4rem}
+.demo-hero-mini p{font-size:0.78rem;color:var(--text2);margin-bottom:0.8rem}
+.demo-cta{background:var(--accent);color:white;border:none;padding:0.4rem 1rem;border-radius:6px;font-size:0.78rem;cursor:pointer}
+.demo-cta-outline{background:none;color:var(--text);border:1px solid var(--border);padding:0.4rem 1rem;border-radius:6px;font-size:0.78rem;cursor:pointer}
+.demo-cta-big{display:block;width:100%;background:linear-gradient(90deg,var(--accent),var(--accent2));color:white;border:none;padding:0.7rem;border-radius:8px;font-size:0.88rem;cursor:pointer;margin:1rem 0}
+.demo-cards-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem}
+.demo-card-mini{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:0.8rem;text-align:center}
+.demo-card-mini span{font-size:1.4rem;display:block;margin-bottom:0.3rem}
+.demo-card-mini p{font-size:0.72rem;color:var(--text2)}
+
+/* PORTFOLIO DEMO */
+.demo-portfolio-hero{display:grid;grid-template-columns:1fr 1fr;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:0.8rem}
+.demo-code-mini{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:0.8rem}
+.demo-cursor{animation:blink 1s step-end infinite}
+@keyframes blink{50%{opacity:0}}
+.demo-skills-mini{display:flex;flex-wrap:wrap;gap:0.4rem}
+.demo-skills-mini span{font-size:0.7rem;padding:0.2rem 0.6rem;background:rgba(124,109,240,0.12);color:var(--accent2);border-radius:99px;border:1px solid rgba(124,109,240,0.25)}
+
+/* LANDING DEMO */
+.demo-landing-hero{text-align:center;padding:1rem 0;border-bottom:1px solid var(--border);margin-bottom:1rem}
+.demo-badge-mini{display:inline-block;background:rgba(245,200,66,0.15);color:#f5c842;border:1px solid rgba(245,200,66,0.3);border-radius:99px;font-size:0.72rem;padding:0.2rem 0.8rem;margin-bottom:0.5rem}
+.demo-trust{display:flex;align-items:center;justify-content:center;gap:0.5rem}
+.demo-features{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem}
+.demo-feat{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:var(--text2)}
+
+/* LOGO DEMO */
+.demo-logo-showcase{padding:0.5rem}
+.demo-logos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.5rem}
+.demo-logo-option{text-align:center}
+.demo-logo-option span{font-size:0.72rem;color:var(--text2);margin-top:0.4rem;display:block}
+.demo-logo-preview{height:90px;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.demo-charte{text-align:center}
+.demo-colors{display:flex;gap:0.5rem;justify-content:center;margin-top:0.5rem}
+.demo-colors div{width:32px;height:32px;border-radius:50%}
+
+/* SHOP DEMO */
+.demo-shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.8rem;margin-top:0.5rem}
+.demo-product{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.8rem}
+.demo-product-img{height:70px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;margin-bottom:0.5rem}
+.demo-product p{font-size:0.75rem;margin-bottom:0.4rem}
+.demo-product strong{font-size:0.78rem}
+.demo-add{background:var(--accent);color:white;border:none;padding:0.25rem 0.5rem;border-radius:5px;font-size:0.68rem;cursor:pointer}
+
+/* DASHBOARD DEMO */
+.demo-dashboard{padding:0.5rem}
+.demo-stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;margin-bottom:1rem}
+.demo-stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.8rem;display:flex;align-items:center;gap:0.8rem}
+.demo-stat-icon{font-size:1.5rem}
+.demo-stat-card strong{display:block;font-size:0.95rem}
+.demo-stat-card p{font-size:0.72rem;color:var(--text2)}
+.demo-activity{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:0.8rem}
+.demo-activity-item{display:flex;align-items:center;gap:0.6rem;padding:0.4rem 0;border-bottom:1px solid var(--border)}
+.demo-activity-item:last-child{border:none}
+.demo-activity-item p{font-size:0.78rem;flex:1}
