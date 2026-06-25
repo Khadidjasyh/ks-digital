@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KS Digital — Création Web & Design Algérie</title>
+  <link rel="icon" href="assets/typographie-romantique-police-lettre-k-floral_53876-116758.avif" type="image/avif" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="boutique.css" />
+</head>
+<body>
+
+<!-- Barre de progression scroll -->
+<div id="scroll-progress"></div>
+
+<!-- Bouton back to top -->
+<button id="back-top" aria-label="Retour en haut">↑</button>
+
+<!-- Bouton WhatsApp flottant -->
+<a href="https://wa.me/213553490066" target="_blank" id="whatsapp-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.523 5.855L.057 23.885a.5.5 0 0 0 .609.61l6.101-1.474A11.946 11.946 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.891 0-3.667-.523-5.18-1.433l-.371-.22-3.853.931.972-3.762-.242-.389A9.959 9.959 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<!-- Popup devis -->
+<div id="popup-overlay">
+  <div id="popup">
+    <button id="popup-close">✕</button>
+    <div class="popup-icon">🎁</div>
+    <h3>Devis gratuit en 24h !</h3>
+    <p>Décrivez votre projet et recevez une offre personnalisée sans engagement.</p>
+    <a href="https://wa.me/213553490066" target="_blank" class="popup-btn">💬 Demander sur WhatsApp</a>
+  </div>
+</div>
+
+<canvas id="particles"></canvas>
+
+<nav>
+  <img src="assets/typographie-romantique-police-lettre-k-floral_53876-116758.avif" alt="Logo KS Digital" class="logo-img" />
+  <ul>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#calculateur">Devis</a></li>
+    <li><a href="#prix">Tarifs</a></li>
+    <li><a href="#portfolio">Réalisations</a></li>
+    <li><a href="#avis">Avis</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="theme-toggle" aria-label="Changer thème">🌙</button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🇩🇿 Basée en Algérie</div>
+    <h1>Votre présence<br/><span class="accent">digitale</span> commence ici</h1>
+    <p class="hero-desc">Création de sites web, portfolios et identités visuelles pour particuliers et entreprises algériennes. Livraison rapide, tarifs accessibles.</p>
+    <div class="hero-btns">
+      <a href="#prix" class="btn btn-primary">Voir les tarifs</a>
+      <a href="https://wa.me/213553490066" target="_blank" class="btn btn-whatsapp">💬 WhatsApp</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hstat"><span class="hstat-num counter" data-target="50">0</span><span class="hstat-label">Clients satisfaits</span></div>
+      <div class="hstat-divider"></div>
+      <div class="hstat"><span class="hstat-num">3j</span><span class="hstat-label">Délai moyen</span></div>
+      <div class="hstat-divider"></div>
+      <div class="hstat"><span class="hstat-num counter" data-target="100">0</span><span class="hstat-label">% sur mesure</span></div>
+    </div>
+  </div>
+  <div class="hero-visual reveal">
+    <div class="floating-card card1"><span>🌐</span><span>Site vitrine</span></div>
+    <div class="floating-card card2"><span>🎨</span><span>Logo & Identité</span></div>
+    <div class="floating-card card3"><span>📱</span><span>Mobile first</span></div>
+    <div class="floating-card card4"><span>⚡</span><span>Livraison rapide</span></div>
+    <div class="hero-circle"><span>KS</span><span>Digital</span></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label reveal">// nos services</p>
+    <h3 class="section-title reveal">Ce qu'on propose</h3>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon">🌐</div>
+        <h4>Site Vitrine</h4>
+        <p>Un site professionnel pour présenter votre activité et attirer des clients.</p>
+        <ul class="service-list">
+          <li>Design moderne & responsive</li>
+          <li>Jusqu'à 5 pages</li>
+          <li>Formulaire de contact</li>
+          <li>Optimisé mobile</li>
+        </ul>
+      </div>
+      <div class="service-card reveal featured">
+        <div class="featured-badge">⭐ Populaire</div>
+        <div class="service-icon">💼</div>
+        <h4>Portfolio Professionnel</h4>
+        <p>Mettez en valeur votre travail avec un portfolio élégant et animé.</p>
+        <ul class="service-list">
+          <li>Design personnalisé</li>
+          <li>Animations modernes</li>
+          <li>Section projets & compétences</li>
+          <li>Déploiement inclus</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🚀</div>
+        <h4>Landing Page</h4>
+        <p>Une page de vente percutante pour promouvoir un produit ou service.</p>
+        <ul class="service-list">
+          <li>Conçue pour convertir</li>
+          <li>Design accrocheur</li>
+          <li>Appels à l'action clairs</li>
+          <li>Livraison en 48h</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🎨</div>
+        <h4>Logo & Identité</h4>
+        <p>Un logo unique et une charte graphique cohérente pour votre marque.</p>
+        <ul class="service-list">
+          <li>3 propositions de logo</li>
+          <li>Formats PNG, SVG, PDF</li>
+          <li>Charte couleurs & typo</li>
+          <li>Révisions incluses</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🛒</div>
+        <h4>Boutique en ligne</h4>
+        <p>Vendez vos produits sur internet avec une boutique e-commerce.</p>
+        <ul class="service-list">
+          <li>Catalogue produits</li>
+          <li>Gestion des commandes</li>
+          <li>Paiement CCP / Baridimob</li>
+          <li>Interface admin</li>
+        </ul>
+      </div>
+      <div class="service-card reveal">
+        <div class="service-icon">🔧</div>
+        <h4>Maintenance & Support</h4>
+        <p>Votre site reste à jour, sécurisé et fonctionnel chaque mois.</p>
+        <ul class="service-list">
+          <li>Mises à jour contenu</li>
+          <li>Support WhatsApp</li>
+          <li>Sauvegarde mensuelle</li>
+          <li>Rapport mensuel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATEUR DE PRIX -->
+<section id="calculateur">
+  <div class="container">
+    <p class="section-label reveal">// devis interactif</p>
+    <h3 class="section-title reveal">Calculez votre devis</h3>
+    <div class="calc-box reveal">
+      <div class="calc-options">
+        <div class="calc-group">
+          <label>Type de projet</label>
+          <div class="calc-btns" id="type-btns">
+            <button class="calc-btn active" data-price="8000">Portfolio</button>
+            <button class="calc-btn" data-price="15000">Site vitrine</button>
+            <button class="calc-btn" data-price="6000">Landing page</button>
+            <button class="calc-btn" data-price="25000">Boutique</button>
+          </div>
+        </div>
+        <div class="calc-group">
+          <label>Options supplémentaires</label>
+          <div class="calc-checks">
+            <label class="calc-check"><input type="checkbox" data-price="3000" /> Logo inclus (+3 000 DZD)</label>
+            <label class="calc-check"><input type="checkbox" data-price="2000" /> Maintenance 1 mois (+2 000 DZD)</label>
+            <label class="calc-check"><input type="checkbox" data-price="1500" /> Formulaire de contact (+1 500 DZD)</label>
+            <label class="calc-check"><input type="checkbox" data-price="2500" /> Version anglaise (+2 500 DZD)</label>
+          </div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <span class="calc-label">Estimation totale</span>
+        <span class="calc-price" id="calc-total">8 000 DZD</span>
+        <a href="https://wa.me/213553490066" target="_blank" class="btn btn-primary" style="margin-top:1rem;display:block;text-align:center;">💬 Demander ce devis</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRIX -->
+<section id="prix">
+  <div class="container">
+    <p class="section-label reveal">// tarifs</p>
+    <h3 class="section-title reveal">Des prix accessibles</h3>
+    <p class="prix-desc reveal">Tous nos tarifs sont en Dinars Algériens. Paiement via CCP, Baridimob ou virement.</p>
+    <div class="prix-grid">
+      <div class="prix-card reveal">
+        <div class="prix-header"><span class="prix-icon">💼</span><h4>Portfolio</h4></div>
+        <div class="prix-amount"><span class="prix-num">8 000</span><span class="prix-currency">DZD</span></div>
+        <ul class="prix-list">
+          <li>✅ Design personnalisé</li>
+          <li>✅ Animations modernes</li>
+          <li>✅ Responsive mobile</li>
+          <li>✅ Déploiement inclus</li>
+          <li>✅ Livraison 3-5 jours</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix">Commander</a>
+      </div>
+      <div class="prix-card reveal featured-prix">
+        <div class="featured-badge">⭐ Recommandé</div>
+        <div class="prix-header"><span class="prix-icon">🌐</span><h4>Site Vitrine</h4></div>
+        <div class="prix-amount"><span class="prix-num">15 000</span><span class="prix-currency">DZD</span></div>
+        <ul class="prix-list">
+          <li>✅ Jusqu'à 5 pages</li>
+          <li>✅ Design premium</li>
+          <li>✅ Formulaire contact</li>
+          <li>✅ Optimisé Google</li>
+          <li>✅ Livraison 5-7 jours</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix featured-btn">Commander</a>
+      </div>
+      <div class="prix-card reveal">
+        <div class="prix-header"><span class="prix-icon">🚀</span><h4>Landing Page</h4></div>
+        <div class="prix-amount"><span class="prix-num">6 000</span><span class="prix-currency">DZD</span></div>
+        <ul class="prix-list">
+          <li>✅ 1 page complète</li>
+          <li>✅ Design accrocheur</li>
+          <li>✅ Appels à l'action</li>
+          <li>✅ Responsive mobile</li>
+          <li>✅ Livraison 48h</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix">Commander</a>
+      </div>
+      <div class="prix-card reveal">
+        <div class="prix-header"><span class="prix-icon">🎨</span><h4>Logo</h4></div>
+        <div class="prix-amount"><span class="prix-num">3 000</span><span class="prix-currency">DZD</span></div>
+        <ul class="prix-list">
+          <li>✅ 3 propositions</li>
+          <li>✅ Formats PNG/SVG</li>
+          <li>✅ 2 révisions</li>
+          <li>✅ Charte couleurs</li>
+          <li>✅ Livraison 48h</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix">Commander</a>
+      </div>
+      <div class="prix-card reveal">
+        <div class="prix-header"><span class="prix-icon">🛒</span><h4>Boutique en ligne</h4></div>
+        <div class="prix-amount"><span class="prix-num">25 000</span><span class="prix-currency">DZD</span></div>
+        <ul class="prix-list">
+          <li>✅ Catalogue complet</li>
+          <li>✅ Gestion commandes</li>
+          <li>✅ Paiement local</li>
+          <li>✅ Interface admin</li>
+          <li>✅ Livraison 10-14 jours</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix">Commander</a>
+      </div>
+      <div class="prix-card reveal">
+        <div class="prix-header"><span class="prix-icon">🔧</span><h4>Maintenance</h4></div>
+        <div class="prix-amount"><span class="prix-num">2 000</span><span class="prix-currency">DZD/mois</span></div>
+        <ul class="prix-list">
+          <li>✅ Mises à jour contenu</li>
+          <li>✅ Support WhatsApp</li>
+          <li>✅ Sauvegarde</li>
+          <li>✅ Rapport mensuel</li>
+          <li>✅ Sans engagement</li>
+        </ul>
+        <a href="https://wa.me/213XXXXXXXXX" class="btn-prix">S'abonner</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="container">
+    <p class="section-label reveal">// réalisations</p>
+    <h3 class="section-title reveal">Nos projets</h3>
+    <div class="filter-btns reveal">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="portfolio">Portfolio</button>
+      <button class="filter-btn" data-filter="vitrine">Site Vitrine</button>
+      <button class="filter-btn" data-filter="landing">Landing Page</button>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-card reveal" data-cat="portfolio">
+        <div class="portfolio-preview p1"><span>💼</span></div>
+        <div class="portfolio-info">
+          <h4>Portfolio Développeuse</h4>
+          <p>Portfolio animé avec particules et effets modernes</p>
+          <span class="portfolio-tag">Portfolio</span>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" data-cat="vitrine">
+        <div class="portfolio-preview p2"><span>🛍️</span></div>
+        <div class="portfolio-info">
+          <h4>Boutique Mode</h4>
+          <p>Site vitrine pour boutique de vêtements à Alger</p>
+          <span class="portfolio-tag">Site Vitrine</span>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" data-cat="landing">
+        <div class="portfolio-preview p3"><span>🍕</span></div>
+        <div class="portfolio-info">
+          <h4>Restaurant El Bahdja</h4>
+          <p>Landing page avec menu et réservation en ligne</p>
+          <span class="portfolio-tag">Landing Page</span>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" data-cat="vitrine">
+        <div class="portfolio-preview p4"><span>💆</span></div>
+        <div class="portfolio-info">
+          <h4>Salon Beauté</h4>
+          <p>Site vitrine avec prise de rendez-vous en ligne</p>
+          <span class="portfolio-tag">Site Vitrine</span>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" data-cat="portfolio">
+        <div class="portfolio-preview p5"><span>📸</span></div>
+        <div class="portfolio-info">
+          <h4>Portfolio Photographe</h4>
+          <p>Galerie photo interactive avec filtres par catégorie</p>
+          <span class="portfolio-tag">Portfolio</span>
+        </div>
+      </div>
+      <div class="portfolio-card reveal" data-cat="landing">
+        <div class="portfolio-preview p6"><span>🎓</span></div>
+        <div class="portfolio-info">
+          <h4>Formation en ligne</h4>
+          <p>Landing page pour cours de langue avec inscription</p>
+          <span class="portfolio-tag">Landing Page</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AVIS CLIENTS -->
+<section id="avis">
+  <div class="container">
+    <p class="section-label reveal">// témoignages</p>
+    <h3 class="section-title reveal">Ce que disent nos clients</h3>
+    <div class="avis-carousel reveal">
+      <div class="avis-track" id="avis-track">
+        <div class="avis-card">
+          <div class="avis-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Travail exceptionnel ! Mon portfolio a été livré en 4 jours, exactement comme je le voulais. Je recommande vivement !"</p>
+          <div class="avis-author"><div class="avis-avatar">SA</div><div><strong>Sarah A.</strong><span>Développeuse web, Alger</span></div></div>
+        </div>
+        <div class="avis-card">
+          <div class="avis-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Site vitrine pour ma boutique livré en 6 jours. Le design est magnifique et mes clients adorent. Prix très raisonnable !"</p>
+          <div class="avis-author"><div class="avis-avatar">KM</div><div><strong>Karim M.</strong><span>Commerçant, Oran</span></div></div>
+        </div>
+        <div class="avis-card">
+          <div class="avis-stars">⭐⭐⭐⭐⭐</div>
+          <p>"Logo et charte graphique de très haute qualité. 3 propositions dès le lendemain. Professionnalisme au top !"</p>
+          <div class="avis-author"><div class="avis-avatar">NB</div><div><strong>Nadia B.</strong><span>Architecte, Constantine</span></div></div>
+        </div>
+        <div class="avis-card">
+          <div class="avis-stars">⭐⭐⭐⭐⭐</div>
+          <p>"La landing page pour mon restaurant a boosté mes réservations de 40%. Investissement qui en vaut vraiment la peine !"</p>
+          <div class="avis-author"><div class="avis-avatar">YT</div><div><strong>Youcef T.</strong><span>Restaurateur, Annaba</span></div></div>
+        </div>
+      </div>
+      <div class="avis-controls">
+        <button id="prev-avis">←</button>
+        <div class="avis-dots" id="avis-dots"></div>
+        <button id="next-avis">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI NOUS -->
+<section id="why">
+  <div class="container">
+    <p class="section-label reveal">// pourquoi nous</p>
+    <h3 class="section-title reveal">Nos avantages</h3>
+    <div class="why-grid">
+      <div class="why-card reveal"><span class="why-icon">⚡</span><h4>Livraison rapide</h4><p>Portfolio en 3 jours, site vitrine en 7 jours. Nous respectons toujours vos délais.</p></div>
+      <div class="why-card reveal"><span class="why-icon">💰</span><h4>Prix algériens</h4><p>Tarifs adaptés au marché local, paiement via CCP et Baridimob.</p></div>
+      <div class="why-card reveal"><span class="why-icon">📱</span><h4>Support WhatsApp</h4><p>Disponibles après livraison. Réponse en moins d'une heure.</p></div>
+      <div class="why-card reveal"><span class="why-icon">🎯</span><h4>100% sur mesure</h4><p>Chaque projet est unique. Pas de templates génériques.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMULAIRE CONTACT -->
+<section id="form-contact">
+  <div class="container">
+    <p class="section-label reveal">// nous écrire</p>
+    <h3 class="section-title reveal">Envoyez-nous un message</h3>
+    <form class="contact-form reveal" id="contact-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nom">Nom complet *</label>
+          <input type="text" id="nom" placeholder="Votre nom" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" placeholder="votre@email.com" required />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="service">Service souhaité</label>
+        <select id="service">
+          <option value="">Choisir un service...</option>
+          <option>Portfolio professionnel</option>
+          <option>Site vitrine</option>
+          <option>Landing page</option>
+          <option>Logo & Identité</option>
+          <option>Boutique en ligne</option>
+          <option>Maintenance</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Votre message *</label>
+        <textarea id="message" rows="5" placeholder="Décrivez votre projet..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary" style="width:100%">Envoyer le message ✉️</button>
+      <div id="form-success" class="form-success">✅ Message envoyé ! Nous vous répondrons dans les 24h.</div>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <p class="section-label reveal">// foire aux questions</p>
+    <h3 class="section-title reveal">Questions fréquentes</h3>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-question">Comment se déroule une commande ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Contactez-nous sur WhatsApp, décrivez votre projet. On vous envoie un devis en 24h. Après validation et paiement d'un acompte de 50%, on commence le travail. Livraison selon le délai convenu, puis solde à la réception.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Comment se fait le paiement ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Nous acceptons le virement CCP, Baridimob, et BaridiPay. Un acompte de 50% est demandé au démarrage, le reste à la livraison.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Est-ce que je peux modifier mon site après livraison ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Oui ! Vous recevez tous les fichiers de votre site. Vous pouvez aussi souscrire à notre service de maintenance mensuel pour que nous gérions les modifications à votre place.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Combien de révisions sont incluses ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>2 révisions sont incluses dans tous nos forfaits. Des révisions supplémentaires sont disponibles à 500 DZD chacune.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Proposez-vous l'hébergement ? <span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Nous déployons gratuitement sur Vercel ou GitHub Pages. Pour un hébergement premium avec nom de domaine personnalisé (.com, .dz), nous pouvons vous accompagner moyennant les frais d'hébergement.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container contact-container">
+    <p class="section-label reveal">// contact</p>
+    <h3 class="section-title reveal">Démarrons votre projet</h3>
+    <p class="contact-desc reveal">Contactez-nous pour un devis gratuit sous 24h !</p>
+    <div class="contact-links">
+      <a href="https://wa.me/213553490066" target="_blank" class="contact-card reveal whatsapp-card">
+        <span class="contact-icon">💬</span>
+        <span class="contact-name">WhatsApp</span>
+        <span class="contact-sub">Réponse rapide</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/khadidja-sayah-80a985288/" target="_blank" class="contact-card reveal">
+        <span class="contact-icon">🔗</span>
+        <span class="contact-name">LinkedIn</span>
+        <span class="contact-sub">Khadidja Sayah</span>
+        <span class="contact-arrow">→</span>
+      </a>
+      <a href="https://github.com/Khadidjasyh" target="_blank" class="contact-card reveal">
+        <span class="contact-icon">💻</span>
+        <span class="contact-name">GitHub</span>
+        <span class="contact-sub">@Khadidjasyh</span>
+        <span class="contact-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 <strong>KS Digital</strong> — Création web & design en Algérie 🇩🇿</p>
+</footer>
+
+<script src="boutique.js"></script>
+</body>
+</html>
