@@ -233,3 +233,7 @@ footer strong{color:var(--accent2)}
   .calc-box{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
+
+/* ── BOUTON MODELE ── */
+.btn-modele{display:block;width:100%;margin-top:1rem;padding:0.6rem;background:none;border:1px solid var(--accent);color:var(--accent2);border-radius:8px;cursor:pointer;font-size:0.85rem;transition:all 0.2s;font-family:'Inter',sans-serif}
+.btn-modele:hover{background:var(--accent);color:white;transform:translateY(-2px)}cd ~/project
